@@ -13,6 +13,7 @@
 
 html{
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 
@@ -103,6 +104,16 @@ html{
 
 
 
+.sticky{
+    position: fixed;
+    top: 0;
+}
+
+
+
+
+
+
 
 
 
@@ -111,7 +122,16 @@ html{
     height: 4rem;
     background-color: #e41c6f;
     box-decoration-break: 0.2rem 0.2rem 0.5rem #555;
+    position: absolute;
+    z-index: 300;
     
+}
+
+
+
+.sticky{
+    position: fixed;
+    top: 0;
 }
 
 
@@ -126,6 +146,11 @@ html{
     text-transform: uppercase;
     position: relative;
     transition: color 0.2s;
+}
+
+
+.change.navbar-link{
+    color: white;
 }
 
 
@@ -151,6 +176,10 @@ html{
 }
 
 
+
+.change.navbar-link::before{
+    width: 130%;
+}
 
 
 
@@ -230,10 +259,11 @@ html{
 }
 
 .progress-percent{
-    width: 90%;
+    width: 0;
     height: 100%;
     background-color: #e41c6f;
     border-radius: 0.3rem;
+    transition: width .5s .5s ease-in-out ;
 }
 
 
@@ -392,7 +422,7 @@ html{
 
 .section-4{
     width: 100%;
-    height: 70vh;
+    height: 80vh;
     background-color: #333;
     display: flex;
     flex-direction: column;
